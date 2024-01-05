@@ -29,7 +29,29 @@
             text-decoration: none;
             color: rgb(0, 0, 0, 0.8);
         }
+        .happy {
+            display: none;
+        }
+        .disappointed {
+            display: none;
+        }
+        .angry {
+            display: none;
+        }
+        .smile {
+            display: none;
+        }
+        .blush {
+            display: none;
+        }
+        .cry   {
+            display: none;
+        }
+        .sad{
+            display: none;
+        }
     </style>
+
 </head>
 <body>
     <div class="container py-5">
@@ -49,82 +71,362 @@
                 </p>
                 <div class="d-flex">
                     <div class="">
-                        <img src="images/smile.png" alt="">
+                        <img src="images/smile.png" alt="" onclick="handleEmojiClick('smile')">
                     </div>
                     <div class="">
-                        <img src="images/laugh.png" alt="">
+                        <img src="images/laugh.png" onclick="handleEmojiClick('happy')">
                     </div>
                     <div class="">
-                        <img src="images/happy.png" alt="">
+                        <img src="images/happy.png" alt="" onclick="handleEmojiClick('blush')">
                     </div>
                     <div class="">
-                        <img src="images/sad.png" alt="">
+                        <img src="images/sad.png" alt="" onclick="handleEmojiClick('sad')">
                     </div>
                     <div class="">
                         <img src="images/neutral.png" alt="">
                     </div>
                     <div class="">
-                        <img src="images/disappointed.png" alt="">
+                        <img src="images/disappointed.png" alt="" onclick="handleEmojiClick('disappointed')">
                     </div>
                     <div class="">
-                        <img src="images/cry.png" alt="">
+                        <img src="images/cry.png" alt="" onclick="handleEmojiClick('cry')">
                     </div>
                     <div class="">
-                        <img src="images/angry.png" alt="">
+                        <img src="images/angry.png" alt="" onclick="handleEmojiClick('angry')">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mb-4">
-            <div class="col-6 pe-0">
-                <div class="card text-center" style="background-color: #D0F1DF;">
-                    <div class="card-body">
-                        <p>Your mood today:</p>
-                        <img src="images/sad.png" alt="">
-                        <p>Disappointed</p>
+        <!-- Disappointed -->
+        <div class="disappointed">
+            <div class="row mb-4 ">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/disappointed.png" alt="">
+                            <p>Disappointed</p>
+                        </div>
                     </div>
                 </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you disappointed?</p>
+                    <ul style="font-size: 14px;">
+                        <li>unfulfilled expectations</li>
+                        <li>failure or lack of success</li>
+                        <li>broken promises or trust issues</li>
+                        <li>negative feedback or criticism</li>
+                        <li>unexpected changes or disruptions</li>
+                        <li>disappointment with others</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-6 ps-0">
-                <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you disappointed?</p>
-                <ul style="font-size: 14px;">
-                    <li>unfulfilled expectations</li>
-                    <li>failure or lack of success</li>
-                    <li>broken promises or trust issues</li>
-                    <li>negative feedback or criticism</li>
-                    <li>unexpected changes or disruptions</li>
-                    <li>disappointment with others</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to lessen disappointment</b></h5></div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to lessen disappointment</b></h5></div>
 
-        <div class="card col-12" style="background-color: #EAEAEA;">
-            <div class="card-body">
-                <ul>
-                    <li>
-                        <b>Identify the cause of your disappointment.</b><br>
-                        It's important to recognize what caused the 
-                        disappointment so that you can take appropriate 
-                        steps to address it
-                    </li>
-                    <li>
-                        <b>Practice mindfulness and self-compassion.</b> 
-                        Being aware of your feelings and accepting them 
-                        without judgment can help you manage your 
-                        disappointment more effectively.
-                    </li>
-                    <li>
-                        <b>Seek professional help if necessary.</b><br> 
-                        If your disappointment is significantly impacting 
-                        your mental health or well-being, it may be helpful
-                        to seek the guidance of a mental health 
-                        professional.
-                    </li>
-                </ul>
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <b>Identify the cause of your disappointment.</b><br>
+                            It's important to recognize what caused the 
+                            disappointment so that you can take appropriate 
+                            steps to address it
+                        </li>
+                        <li>
+                            <b>Practice mindfulness and self-compassion.</b> 
+                            Being aware of your feelings and accepting them 
+                            without judgment can help you manage your 
+                            disappointment more effectively.
+                        </li>
+                        <li>
+                            <b>Seek professional help if necessary.</b><br> 
+                            If your disappointment is significantly impacting 
+                            your mental health or well-being, it may be helpful
+                            to seek the guidance of a mental health 
+                            professional.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <!-- Disappointed -->
+        <!-- sad -->
+        <div class="sad">
+            <div class="row mb-4 ">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/sad.png" alt="">
+                            <p>Disappointed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you disappointed?</p>
+                    <ul style="font-size: 14px;">
+                        <li>unfulfilled expectations</li>
+                        <li>failure or lack of success</li>
+                        <li>broken promises or trust issues</li>
+                        <li>negative feedback or criticism</li>
+                        <li>unexpected changes or disruptions</li>
+                        <li>disappointment with others</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to lessen disappointment</b></h5></div>
+
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <b>Identify the cause of your disappointment.</b><br>
+                            It's important to recognize what caused the 
+                            disappointment so that you can take appropriate 
+                            steps to address it
+                        </li>
+                        <li>
+                            <b>Practice mindfulness and self-compassion.</b> 
+                            Being aware of your feelings and accepting them 
+                            without judgment can help you manage your 
+                            disappointment more effectively.
+                        </li>
+                        <li>
+                            <b>Seek professional help if necessary.</b><br> 
+                            If your disappointment is significantly impacting 
+                            your mental health or well-being, it may be helpful
+                            to seek the guidance of a mental health 
+                            professional.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- sad -->
+        <!-- Happy -->
+        <div class="happy">
+            <div class="row mb-4">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/laugh.png" alt="">
+                            <p>Happy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you Happy?</p>
+                    <ul style="font-size: 14px;">
+                        <li>Receiving a compliment at a random moment</li>
+                        <li>Spending time with my family and friends</li>
+                        <li>Achieving my goals in school, and my personal life</li>
+                        <li>Having time to myself</li>
+                        <li>Doing something active outdoors </li>
+                        <li>Talking to or playing with my pet</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to stay happy</b></h5></div>
+
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <b>Think more positive than negative.</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Happy -->
+        <!-- Angry -->
+        <div class="angry">
+            <div class="row mb-4">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/angry.png" alt="">
+                            <p>Angry</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you Angry?</p>
+                    <ul style="font-size: 14px;">
+                        <li>Being treated unfairly</li>
+                        <li>Other people not respecting my authority, feelings, or property</li>
+                        <li>stressful day-to-day things</li>
+                        <li>unresolved trauma</li>
+                        <li>She betrayed me</li>
+                        <li>Unmet Expectations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to Lessen Anger</b></h5></div>
+
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <b>Practice Active Listening.</b><br>
+                            Listen to the other person's perspective actively, which can help in understanding and resolving conflicts
+                        </li>
+                        <li>
+                            <b>Set Realistic Expectations.</b> 
+                            Adjust expectations to realistic levels to reduce frustration and disappointment.
+                        </li>
+                        <li>
+                            <b>Develop Healthy Outlets.</b><br> 
+                            Find positive outlets for stress and anger, such as hobbies, sports, or creative activities.
+                        </li>
+                        <li>
+                            <b>Seek Support.</b><br> 
+                            If anger becomes a recurring issue, consider seeking guidance from a counselor or therapist to explore underlying causes and coping strategies.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Angry -->
+        <!-- Smile -->
+        <div class="smile">
+            <div class="row mb-4">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/smile.png" alt="">
+                            <p>Smiley</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you Smile?</p>
+                    <ul style="font-size: 14px;">
+                        <li>Experiencing or witnessing acts of kindness</li>
+                        <li>Pleasant surprises, whether big or small</li>
+                        <li>Receiving genuine compliments</li>
+                        <li>Enjoying beautiful scenery, sunsets, or moments of serenity</li>
+                        <li>Feeling loved or expressing love</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to maintain your smile</b></h5></div>
+
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Regularly express gratitude for the positive aspects of your life.                        
+                        </li>
+                        <li>
+                            Spend time with positive and supportive people who uplift your spirits.
+                        </li>
+                        <li>
+                            Stay present in the moment and practice mindfulness.                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Smile -->
+
+        <!-- Blush -->
+        <div class="blush">
+            <div class="row mb-4 ">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/happy.png" alt="">
+                            <p>Blushy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you blush?</p>
+                    <ul style="font-size: 14px;">
+                        <li>Embarrassment, shyness, or self-consciousness.</li>
+                        <li>Expressing romantic interest, receiving compliments, or being in the presence of a crush</li>
+                        <li>Compliments or praise</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to lessen and maintain blushing</b></h5></div>
+
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <b>Practice Relaxation Techniques</b><br>
+                            Engage in relaxation techniques, such as deep breathing exercises, to help manage anxiety and stress 
+                        </li>
+                        <li>
+                            <b>Positive Visualization.</b> 
+                            Visualize positive outcomes in situations where you might typically blush. 
+                        </li>
+                        <li>
+                            <b>Positive Self-Talk.</b><br> 
+                            Replace negative thoughts with positive affirmations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Blush -->
+        <!-- Cry -->
+        <div class="cry">
+            <div class="row mb-4 ">
+                <div class="col-6 pe-0">
+                    <div class="card text-center" style="background-color: #D0F1DF;">
+                        <div class="card-body">
+                            <p>Your mood today:</p>
+                            <img src="images/cry.png" alt="">
+                            <p>Crying</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-0">
+                    <p class="rounded" style="font-size: 12px; background-color:#B3C7BC">What makes you cry?</p>
+                    <ul style="font-size: 14px;">
+                        <li>Death of a loved one</li>
+                        <li>End of a relationship</li>
+                        <li>Witnessing someone else's pain, suffering, or joy</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center p-2 rounded mb-4" style="background-color: #B3C7BC;"><h5 class="m-0"><b>Tips to lessen it</b></h5></div>
+
+            <div class="card col-12" style="background-color: #EAEAEA;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <b>Laugh and Find Joy</b><br>
+                            Incorporate humor and activities that bring joy into your life. 
+                        </li>
+                        <li>
+                            <b>Practice Relaxation Techniques.</b> 
+                            Engage in relaxation techniques, such as deep breathing exercises, to help manage stress and anxiety, which can be associated with crying.
+                        </li>
+                        <li>
+                            <b>Seek Support</b><br> 
+                            If you find yourself crying frequently and it's impacting your well-being, consider seeking support from friends, family, or a mental health professional.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Cry -->
+
 
     </div>
     <div class="offcanvas offcanvas-start" id="demo">
@@ -199,5 +501,18 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1b65260656.js" crossorigin="anonymous"></script>
+    <script>
+        function handleEmojiClick(mood) {
+            // Hide all mood sections
+            document.querySelectorAll('.happy, .disappointed, .angry, .smile, .blush, .cry, .sad').forEach(section => {
+                section.style.display = 'none';
+            });
+    
+            // Show the selected mood section
+            document.querySelector('.' + mood).style.display = 'block';
+        }
+    </script>
+    
+    
 </body>
 </html>
